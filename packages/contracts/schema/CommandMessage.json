@@ -1,0 +1,191 @@
+{
+  "description": "Discrete, menu-driven actions.",
+  "properties": {
+    "type": {
+      "const": "COMMAND",
+      "default": "COMMAND",
+      "title": "Type",
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "EQUIP_WEAPON",
+        "TWIN_EQUIP",
+        "UNLOCK_SKILL",
+        "USE_ITEM",
+        "SET_ABILITY_SLOT",
+        "PAUSE",
+        "RESUME",
+        "RESTART",
+        "REQUEST_ROOM",
+        "SET_TWIN_STANCE",
+        "SWAP_WEAPON",
+        "SET_OFFHAND",
+        "TRAVEL",
+        "TALK",
+        "BUY_ITEM",
+        "SET_NAME",
+        "TWIN_REQUEST",
+        "TWIN_CALL",
+        "SAVE",
+        "RESPEC",
+        "SPAWN"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "weaponId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Weaponid"
+    },
+    "skillId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Skillid"
+    },
+    "itemId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Itemid"
+    },
+    "abilityId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Abilityid"
+    },
+    "slot": {
+      "anyOf": [
+        {
+          "maximum": 4,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Slot"
+    },
+    "stance": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Stance"
+    },
+    "seed": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Seed"
+    },
+    "areaId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Areaid"
+    },
+    "npcId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Npcid"
+    },
+    "playerName": {
+      "anyOf": [
+        {
+          "maxLength": 64,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Playername"
+    },
+    "twinName": {
+      "anyOf": [
+        {
+          "maxLength": 64,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Twinname"
+    },
+    "enemyType": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Enemytype"
+    }
+  },
+  "required": [
+    "action"
+  ],
+  "title": "CommandMessage",
+  "type": "object"
+}

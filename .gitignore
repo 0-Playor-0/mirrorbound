@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+node_modules/.tmp/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+*.local
+
+# Replay recordings
+apps/server/runs/
+
+# Player checkpoints: per-machine run state, not project content.
+apps/server/saves/
+
+.DS_Store
